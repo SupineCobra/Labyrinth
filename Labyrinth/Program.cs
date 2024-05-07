@@ -161,7 +161,7 @@ namespace Labyrinth_of_madness
                             Console.WriteLine("-");
                         }
 
-                        Console.WriteLine($"\n\nenemies are marked with '+' and they deduce points from your scorepoints are marked with '*' and they add points to your score\\n If your score drops below 0, you die.\n press 'Q' to exit game");
+                        Console.WriteLine($"\n\nenemies are marked with '+' and they deduce points from your score \n points are marked with '*' and they add points to your score\n If your score drops below 0, you die.\n press 'Q' to exit game");
                      
 
                     }
@@ -184,7 +184,9 @@ namespace Labyrinth_of_madness
                 {
                     if (i == playerY && j == playerX)
                     {
-                        Console.Write('P'); // Draw the player
+                         Console.ForegroundColor = ConsoleColor.Blue;    
+                         Console.Write('P'); // Draw the player
+                         Console.ResetColor();
                     }
                     else if (maze[i, j] == 'G') // Draw the goal
                     {
